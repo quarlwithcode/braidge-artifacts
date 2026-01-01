@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-coffee-900 bg-coffee-50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-coffee-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-coffee-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-coffee-500;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-coffee-200 text-coffee-900;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-coffee-500;
+}
